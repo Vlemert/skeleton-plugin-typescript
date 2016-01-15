@@ -1,0 +1,15 @@
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function configure(config) {
+    config.globalResources('./hello-world');
+}
+exports.configure = configure;
+
+var HelloWorld = function HelloWorld() {
+    _classCallCheck(this, HelloWorld);
+};
+
+exports.HelloWorld = HelloWorld;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImF1cmVsaWEtc2tlbGV0b24tcGx1Z2luLnRzIl0sIm5hbWVzIjpbImNvbmZpZ3VyZSJdLCJtYXBwaW5ncyI6Ijs7OztBQUVBLFNBQUEsU0FBQSxDQUEwQixNQUE4QixFQUFBO0FBQ3REQSxVQUFNQSxDQUFDQSxlQUFlQSxDQUFDQSxlQUFlQSxDQUFDQSxDQUFDQTtDQUN6Q0E7QUFGZSxPQUFBLENBQUEsU0FBUyxHQUFBLFNBRXhCLENBQUE7O0lBRUQsVUFBQSxZQUFBLFVBQUE7MEJBQUEsVUFBQTs7O0FBQWEsT0FBQSxDQUFBLFVBQVUsR0FBQSxVQUFHLENBQUEiLCJmaWxlIjoiYXVyZWxpYS1za2VsZXRvbi1wbHVnaW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0ZyYW1ld29ya0NvbmZpZ3VyYXRpb259IGZyb20gJ2F1cmVsaWEtZnJhbWV3b3JrJztcblxuZXhwb3J0IGZ1bmN0aW9uIGNvbmZpZ3VyZShjb25maWc6IEZyYW1ld29ya0NvbmZpZ3VyYXRpb24pIHtcclxuICBjb25maWcuZ2xvYmFsUmVzb3VyY2VzKCcuL2hlbGxvLXdvcmxkJyk7XHJcbn1cclxuXG5leHBvcnQgY2xhc3MgSGVsbG9Xb3JsZCB7fVxyXG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

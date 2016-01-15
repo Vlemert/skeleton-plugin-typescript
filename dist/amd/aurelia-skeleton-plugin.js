@@ -1,0 +1,17 @@
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+define(["require", "exports"], function (require, exports) {
+    function configure(config) {
+        config.globalResources('./hello-world');
+    }
+    exports.configure = configure;
+
+    var HelloWorld = function HelloWorld() {
+        _classCallCheck(this, HelloWorld);
+    };
+
+    exports.HelloWorld = HelloWorld;
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImF1cmVsaWEtc2tlbGV0b24tcGx1Z2luLmpzIiwiYXVyZWxpYS1za2VsZXRvbi1wbHVnaW4udHMiXSwibmFtZXMiOlsiY29uZmlndXJlIl0sIm1hcHBpbmdzIjoiOzs7O0FBQUEsTUFBTSxDQUFDLENBQUMsU0FBUyxFQUFFLFNBQVMsQ0FBQyxFQUFFLFVBQVUsT0FBTyxFQUFFLE9BQU8sRUFBRTtBQ0UzRCxhQUFBLFNBQUEsQ0FBMEIsTUFBOEIsRUFBQTtBQUN0REEsY0FBTUEsQ0FBQ0EsZUFBZUEsQ0FBQ0EsZUFBZUEsQ0FBQ0EsQ0FBQ0E7S0FDekNBO0FBRmUsV0FBQSxDQUFBLFNBQVMsR0FBQSxTQUV4QixDQUFBOztRQUVELFVBQUEsWUFBQSxVQUFBOzhCQUFBLFVBQUE7OztBQUFhLFdBQUEsQ0FBQSxVQUFVLEdBQUEsVUFBRyxDQUFBO0NERXpCLENBQUMsQ0FBQyIsImZpbGUiOiJhdXJlbGlhLXNrZWxldG9uLXBsdWdpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbImRlZmluZShbXCJyZXF1aXJlXCIsIFwiZXhwb3J0c1wiXSwgZnVuY3Rpb24gKHJlcXVpcmUsIGV4cG9ydHMpIHtcbiAgICBmdW5jdGlvbiBjb25maWd1cmUoY29uZmlnKSB7XG4gICAgICAgIGNvbmZpZy5nbG9iYWxSZXNvdXJjZXMoJy4vaGVsbG8td29ybGQnKTtcbiAgICB9XG4gICAgZXhwb3J0cy5jb25maWd1cmUgPSBjb25maWd1cmU7XG4gICAgY2xhc3MgSGVsbG9Xb3JsZCB7XG4gICAgfVxuICAgIGV4cG9ydHMuSGVsbG9Xb3JsZCA9IEhlbGxvV29ybGQ7XG59KTtcbiIsImltcG9ydCB7RnJhbWV3b3JrQ29uZmlndXJhdGlvbn0gZnJvbSAnYXVyZWxpYS1mcmFtZXdvcmsnO1xuXG5leHBvcnQgZnVuY3Rpb24gY29uZmlndXJlKGNvbmZpZzogRnJhbWV3b3JrQ29uZmlndXJhdGlvbikge1xyXG4gIGNvbmZpZy5nbG9iYWxSZXNvdXJjZXMoJy4vaGVsbG8td29ybGQnKTtcclxufVxyXG5cbmV4cG9ydCBjbGFzcyBIZWxsb1dvcmxkIHt9XHJcbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
