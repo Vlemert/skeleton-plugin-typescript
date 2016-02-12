@@ -21,7 +21,7 @@ var tsProjectCJS = typescript.createProject('./tsconfig.json', { typescript: tsc
 var tsProjectSystem = typescript.createProject('./tsconfig.json', { typescript: tsc, module: 'system' });
 
 function buildFromTs(tsProject, outputPath, compileTo5) {
-  var src = paths.dtsSrc.concat(paths.output + 'ts/' + tsName);
+  var src = paths.dtsSrc.concat(paths.source);
   
   return gulp.src(src)
     .pipe(plumber())
@@ -34,7 +34,7 @@ function buildFromTs(tsProject, outputPath, compileTo5) {
 }
 
 gulp.task('build-dts', function() {
-  var src = paths.dtsSrc.concat(paths.output + 'ts/' + tsName);
+  var src = paths.dtsSrc.concat(paths.output + 'temp/' + tsName);
   
   var tsResult = gulp.src(src)
     .pipe(changed(paths.output, {extension: '.js'}))
@@ -55,7 +55,7 @@ gulp.task('build-html-ts', function () {
     .pipe(gulp.dest(paths.output + 'ts'));
 });
 
-gulp.task('build-ts', ['build-html-ts'], function() {
+gulp.task('build-index', ['build-html-ts'], function() {
   var importsToAdd = [];
 
   return gulp.src(paths.source)
@@ -69,6 +69,14 @@ gulp.task('build-ts', ['build-html-ts'], function() {
   .pipe(insert.transform(function(contents) {
     return tools.createImportBlock(importsToAdd) + contents;
   }))
+  .pipe(insert.transform(function(contents) {
+    return contents.replace(/^export \{.*\}.*from \'.\/.*\';?$/gm, '');
+  }))
+  .pipe(gulp.dest(paths.output + 'temp'));
+});
+
+gulp.task('build-ts', ['build-html-ts'], function() {
+  return gulp.src(paths.source)
   .pipe(gulp.dest(paths.output + 'ts'));
 });
 
@@ -120,8 +128,8 @@ gulp.task('move-dts', function(){
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    'build-ts',   
-    ['build-es6', 'build-commonjs', 'build-amd', 'build-system'],
+    ['build-ts', 'build-es6', 'build-commonjs', 'build-amd', 'build-system'],
+    'build-index',
     'build-dts',
     'move-dts',
     callback
